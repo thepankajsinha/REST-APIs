@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//create todo schema
 const todoSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -17,6 +18,7 @@ const todoSchema = new mongoose.Schema({
     }
 }, {timestamps: true})
 
+//create todo model
 const Todo = mongoose.model('Todo', todoSchema);
 
 module.exports = Todo;

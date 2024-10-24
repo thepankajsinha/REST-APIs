@@ -1,5 +1,6 @@
 const Todo = require('../models/todo.model.js');
 
+//create a new Todo
 const createTodo = async (req, res) => {
   try {
     // Extract title and description from the request body
@@ -26,6 +27,7 @@ const createTodo = async (req, res) => {
   }
 };
 
+//get all Todo items
 const getAllTodo = async (req, res) => {
     try {
       //find all todos from the database
@@ -49,6 +51,7 @@ const getAllTodo = async (req, res) => {
     }
 };
 
+//get a single Todo item by id
 const getTodoById = async (req, res) => {
     try {
       //get the todo id from the request url
@@ -75,6 +78,7 @@ const getTodoById = async (req, res) => {
     }
 };
 
+//update a Todo item by id
 const updateTodo = async (req, res) => {
     try {
       //get the todo id from the request url
@@ -104,6 +108,7 @@ const updateTodo = async (req, res) => {
     }
 };
 
+//delete the todo
 const deleteTodo = async (req, res) => {
     try {
       //get the todo id from the request url
